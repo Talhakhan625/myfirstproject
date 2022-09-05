@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:my_first_application/new_app.dart';
+import 'package:my_first_application/new_button.dart';
 
 class NewMobile extends StatelessWidget {
   const NewMobile({Key? key}) : super(key: key);
@@ -18,12 +20,9 @@ class NewMobile extends StatelessWidget {
       ),
       body: Row(
         children: [
-          Expanded(
-            child: Container(
-              color: Colors.amber,
-              width: 100,
-              height: 50,
-            ),
+          NewButton(
+            title: ('Button 1'),
+            color: Colors.red,
           ),
         ],
       ),
