@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:my_first_application/Views/My_Page.dart';
 import 'package:my_first_application/Views/new_project.dart';
+<<<<<<< Updated upstream
 import 'package:my_first_application/new_app.dart';
+=======
+import 'package:my_first_application/Views/second_page.dart';
+>>>>>>> Stashed changes
 import 'package:my_first_application/new_mobile.dart';
 import 'package:my_first_application/second_screen.dart';
 import 'package:my_first_application/text_style.dart';
@@ -23,7 +27,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+<<<<<<< Updated upstream
       home: SecondScreen(),
+=======
+      home: const SecondPage(),
+>>>>>>> Stashed changes
     );
   }
 }
