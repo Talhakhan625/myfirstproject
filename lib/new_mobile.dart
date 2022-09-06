@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-<<<<<<< Updated upstream
 import 'package:my_first_application/new_app.dart';
-=======
->>>>>>> Stashed changes
 import 'package:my_first_application/new_button.dart';
 
 class NewMobile extends StatelessWidget {
@@ -21,15 +18,6 @@ class NewMobile extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.black,
       ),
-<<<<<<< Updated upstream
-      body: Row(
-        children: [
-          NewButton(
-            title: ('Button 1'),
-            color: Colors.red,
-          ),
-        ],
-=======
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -137,7 +125,6 @@ class NewMobile extends StatelessWidget {
             ),
           ],
         ),
->>>>>>> Stashed changes
       ),
     );
   }
