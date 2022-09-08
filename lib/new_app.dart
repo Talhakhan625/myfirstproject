@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_first_application/my_navigator.dart';
 
 class NewApp extends StatelessWidget {
   const NewApp({Key? key}) : super(key: key);
@@ -43,10 +44,7 @@ class NewApp extends StatelessWidget {
               ),
             ],
           ),
-          CircleAvatar(
-            radius: 50,
-            backgroundColor: Colors.red,
-          ),
+          MyNavigator(),
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [

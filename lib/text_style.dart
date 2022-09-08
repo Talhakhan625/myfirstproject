@@ -31,6 +31,12 @@ class MyTextStyleScreen extends StatelessWidget {
               color: Colors.white,
             ),
           ),
+          ListTile(
+            iconColor: Colors.red,
+            title: Text('This is title'),
+            subtitle: Text('This is sub'),
+            trailing: Icon(Icons.abc),
+          ),
         ],
       ),
     );

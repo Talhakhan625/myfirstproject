@@ -6,15 +6,16 @@ class SecondScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Row(
+      body: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.only(left: 10.0),
-            child: Column(
-              children: [
-                Container(
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(right: 10.0),
+                child: Container(
                   width: 50,
-                  height: 100,
+                  height: 200,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(30),
@@ -22,14 +23,10 @@ class SecondScreen extends StatelessWidget {
                     color: Colors.red,
                   ),
                 ),
-              ],
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 10.0, right: 10),
-            child: Column(
-              children: [
-                Container(
+              ),
+              Padding(
+                padding: const EdgeInsets.only(right: 10.0),
+                child: Container(
                   width: 50,
                   height: 150,
                   decoration: BoxDecoration(
@@ -39,14 +36,10 @@ class SecondScreen extends StatelessWidget {
                     color: Colors.red,
                   ),
                 ),
-              ],
-            ),
-          ),
-          Column(
-            children: [
+              ),
               Container(
                 width: 50,
-                height: 200,
+                height: 100,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(30),
@@ -65,19 +58,49 @@ class SecondScreen extends StatelessWidget {
               ),
             ),
           ),
-          Column(
-            children: [
-              Container(
-                width: 50,
-                height: 200,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(30),
-                      bottomRight: Radius.circular(30)),
-                  color: Colors.red,
+          Expanded(
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(right: 10.0),
+                  child: Container(
+                    width: 50,
+                    height: 100,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(30),
+                          topRight: Radius.circular(30)),
+                      color: Colors.red,
+                    ),
+                  ),
                 ),
-              ),
-            ],
+                Padding(
+                  padding: const EdgeInsets.only(right: 10.0),
+                  child: Container(
+                    width: 50,
+                    height: 150,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(30),
+                          topRight: Radius.circular(30)),
+                      color: Colors.red,
+                    ),
+                  ),
+                ),
+                Container(
+                  width: 50,
+                  height: 200,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(30),
+                        topRight: Radius.circular(30)),
+                    color: Colors.red,
+                  ),
+                ),
+              ],
+            ),
           ),
         ],
       ),
