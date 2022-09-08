@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_first_application/Views/My_Page.dart';
 import 'package:my_first_application/Views/new_project.dart';
-import 'package:my_first_application/new_app.dart';
+import 'package:my_first_application/Views/second_page.dart';
 import 'package:my_first_application/new_mobile.dart';
 import 'package:my_first_application/new_navigator.dart';
 import 'package:my_first_application/new_text_field.dart';

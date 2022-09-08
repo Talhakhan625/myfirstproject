@@ -11,11 +11,19 @@ class NewButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text(title!),
-      color: color,
-      width: 100,
-      height: 50,
+    return Padding(
+      padding: const EdgeInsets.all(10.0),
+      child: Container(
+        child: Center(
+          child: Text(title!),
+        ),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(30),
+          color: color,
+        ),
+        width: 100,
+        height: 50,
+      ),
     );
   }
 }
