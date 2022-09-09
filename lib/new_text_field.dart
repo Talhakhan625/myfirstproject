@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:my_first_application/second_screen_2.dart';
+import 'package:my_first_application/new_screen.dart';
 
 class NewTextField extends StatelessWidget {
   final TextEditingController textNameController = TextEditingController();
   final TextEditingController textUserNameController = TextEditingController();
   final TextEditingController textPasswordController = TextEditingController();
   final TextEditingController textRePasswordController =
+      TextEditingController();
+  final TextEditingController textAddressController = TextEditingController();
+  final TextEditingController textReasontojoinController =
       TextEditingController();
   NewTextField({Key? key}) : super(key: key);
 
@@ -116,12 +119,19 @@ class NewTextField extends StatelessWidget {
           ElevatedButton(
               onPressed: () {
                 Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => SecondScreen2(
-                          name: textNameController.text,
-                          username: textUserNameController.text,
-                          password: textPasswordController.text,
-                          repassword: textRePasswordController.text,
-                        )));
+                    builder: (context) => MyNewScreen(
+                        name: textNameController.text,
+                        address: textAddressController.text,
+                        rtj: textReasontojoinController.text)
+                    // SecondScreen(
+                    //       name: textNameController.text,
+                    //       username: textUserNameController.text,
+                    //       address: textAddressController.text,
+                    //       reasontojoin: textReasontojoinController.text,
+                    //       password: textPasswordController.text,
+                    //       repassword: textRePasswordController.text,
+                    //     )
+                    ));
               },
               child: const Text('Login'),
               style: ButtonStyle(

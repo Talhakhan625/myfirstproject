@@ -33,13 +33,60 @@ class RelatedTextField extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(10.0),
+            child: Container(
+              child: TextField(
+                controller: textNameController,
+                decoration: InputDecoration(
+                    icon: Icon(Icons.person),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(30)),
+                    labelText: 'Name',
+                    hintText: 'Enter your name',
+                    suffix: Icon(
+                      Icons.person,
+                      color: Colors.blue,
+                      size: 30,
+                    ),
+                    prefix: Icon(Icons.abc)),
+                maxLines: 1,
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Padding(
+            padding: const EdgeInsets.all(10.0),
             child: TextField(
-              controller: textNameController,
+              controller: textUserNameController,
               decoration: InputDecoration(
+                  icon: Icon(Icons.person),
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(30)),
-                  labelText: 'Name',
-                  hintText: 'Enter your name',
+                  labelText: 'User name',
+                  hintText: 'Enter your user name',
+                  suffix: Icon(
+                    Icons.person,
+                    color: Colors.blue,
+                    size: 30,
+                  ),
+                  prefix: Icon(Icons.abc)),
+              maxLines: 1,
+            ),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: TextField(
+              controller: textAddressController,
+              decoration: InputDecoration(
+                  icon: Icon(Icons.mail),
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(30)),
+                  labelText: 'Address',
+                  hintText: 'Enter your Address',
                   suffix: Icon(
                     Icons.person,
                     color: Colors.blue,
@@ -54,12 +101,13 @@ class RelatedTextField extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(10.0),
             child: TextField(
-              controller: textUserNameController,
+              controller: textReasonController,
               decoration: InputDecoration(
+                  icon: Icon(Icons.abc_sharp),
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(30)),
-                  labelText: 'User name',
-                  hintText: 'Enter your user name',
+                  labelText: 'Reason to Join',
+                  hintText: 'Enter your reason',
                   suffix: Icon(
                     Icons.person,
                     color: Colors.blue,
@@ -71,74 +119,48 @@ class RelatedTextField extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
-          TextField(
-            controller: textAddressController,
-            decoration: InputDecoration(
-                border:
-                    OutlineInputBorder(borderRadius: BorderRadius.circular(30)),
-                labelText: 'Address',
-                hintText: 'Enter your Address',
-                suffix: Icon(
-                  Icons.person,
-                  color: Colors.blue,
-                  size: 30,
-                ),
-                prefix: Icon(Icons.abc)),
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: TextField(
+              controller: textPasswordController,
+              decoration: InputDecoration(
+                  icon: Icon(Icons.password),
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(30)),
+                  labelText: 'Password',
+                  hintText: 'Enter your password',
+                  suffix: Icon(
+                    Icons.person,
+                    color: Colors.blue,
+                    size: 30,
+                  ),
+                  prefix: Icon(Icons.numbers)),
+              obscureText: true,
+              obscuringCharacter: '*',
+            ),
           ),
           SizedBox(
             height: 20,
           ),
-          TextField(
-            controller: textReasonController,
-            decoration: InputDecoration(
-                border:
-                    OutlineInputBorder(borderRadius: BorderRadius.circular(30)),
-                labelText: 'Reason to Join',
-                hintText: 'Enter your reason',
-                suffix: Icon(
-                  Icons.person,
-                  color: Colors.blue,
-                  size: 30,
-                ),
-                prefix: Icon(Icons.abc)),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          TextField(
-            controller: textPasswordController,
-            decoration: InputDecoration(
-                border:
-                    OutlineInputBorder(borderRadius: BorderRadius.circular(30)),
-                labelText: 'Password',
-                hintText: 'Enter your password',
-                suffix: Icon(
-                  Icons.person,
-                  color: Colors.blue,
-                  size: 30,
-                ),
-                prefix: Icon(Icons.abc)),
-            obscureText: true,
-            obscuringCharacter: '*',
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          TextField(
-            controller: textRePasswordController,
-            decoration: InputDecoration(
-                border:
-                    OutlineInputBorder(borderRadius: BorderRadius.circular(30)),
-                labelText: 'Rewrite Password',
-                hintText: 'Enter your same password',
-                suffix: Icon(
-                  Icons.person,
-                  color: Colors.blue,
-                  size: 30,
-                ),
-                prefix: Icon(Icons.abc)),
-            obscureText: true,
-            obscuringCharacter: '*',
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: TextField(
+              controller: textRePasswordController,
+              decoration: InputDecoration(
+                  icon: Icon(Icons.password),
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(30)),
+                  labelText: 'Rewrite Password',
+                  hintText: 'Enter your same password',
+                  suffix: Icon(
+                    Icons.person,
+                    color: Colors.blue,
+                    size: 30,
+                  ),
+                  prefix: Icon(Icons.numbers)),
+              obscureText: true,
+              obscuringCharacter: '*',
+            ),
           ),
           SizedBox(
             height: 20,
@@ -148,9 +170,6 @@ class RelatedTextField extends StatelessWidget {
                 Navigator.of(context).push(MaterialPageRoute(
                     builder: (context) => ScreenRelated(
                           name: textNameController.text,
-                          username: textUserNameController.text,
-                          password: textPasswordController.text,
-                          repassword: textRePasswordController.text,
                           address: textAddressController.text,
                           reason: textReasonController.text,
                         )));

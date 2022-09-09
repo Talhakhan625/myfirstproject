@@ -1,12 +1,20 @@
 import 'package:flutter/material.dart';
 
-class SecondScreen2 extends StatelessWidget {
+class SecondScreen extends StatelessWidget {
   String? name;
   String? username;
+  String? address;
+  String? reasontojoin;
   String? password;
   String? repassword;
-  SecondScreen2(
-      {this.name, this.username, this.password, this.repassword, Key? key})
+  SecondScreen(
+      {this.name,
+      this.username,
+      this.address,
+      this.reasontojoin,
+      this.password,
+      this.repassword,
+      Key? key})
       : super(key: key);
 
   @override
@@ -17,31 +25,16 @@ class SecondScreen2 extends StatelessWidget {
         backgroundColor: Colors.blue,
         centerTitle: true,
       ),
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+      body: Column(
         children: [
           Column(
             children: [
-              Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: Container(
-                  child: Center(
-                    child: Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: Column(
-                        children: [
-                          Text(name!),
-                          Text(username!),
-                          Text(password!),
-                          Text(repassword!),
-                        ],
-                      ),
-                    ),
-                  ),
-                  width: 200,
-                  height: 100,
-                  color: Colors.yellow,
-                ),
+              Text('Name', style: TextStyle(color: Colors.black, fontSize: 25)),
+              Container(
+                child: Text(name!),
+                color: Colors.amber,
+                height: 200,
+                width: 200,
               ),
             ],
           ),

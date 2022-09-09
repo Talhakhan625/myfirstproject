@@ -4,6 +4,7 @@ import 'package:my_first_application/Views/new_project.dart';
 import 'package:my_first_application/Views/second_page.dart';
 import 'package:my_first_application/new_mobile.dart';
 import 'package:my_first_application/new_navigator.dart';
+import 'package:my_first_application/new_screen.dart';
 import 'package:my_first_application/new_text_field.dart';
 import 'package:my_first_application/related_text_field.dart';
 import 'package:my_first_application/second_screen.dart';
