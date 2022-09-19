@@ -9,6 +9,7 @@ import 'package:my_first_application/new_text_field.dart';
 import 'package:my_first_application/related_text_field.dart';
 import 'package:my_first_application/second_screen.dart';
 import 'package:my_first_application/second_screen_2.dart';
+import 'package:my_first_application/speed.dart';
 import 'package:my_first_application/text_style.dart';
 
 import 'Views/home_page.dart';
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: RelatedTextField(),
+      home: MySpeed(),
     );
   }
 }
